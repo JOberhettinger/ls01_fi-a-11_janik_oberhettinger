@@ -28,6 +28,8 @@ public class koneingabe {
 		
 		System.out.print("Geben Sie Ihr Geschlecht (w/m/d)");
 		geschlecht = myScanner.next().charAt(0);
+		System.out.println(geschlecht);
+		myScanner.close();
 		
 				
 	}
