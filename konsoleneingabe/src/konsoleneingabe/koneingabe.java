@@ -31,7 +31,6 @@ public class koneingabe {
 		System.out.println(geschlecht);
 		myScanner.close();
 		
-				
 	}
 
 }
