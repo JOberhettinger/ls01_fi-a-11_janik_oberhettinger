@@ -10,16 +10,21 @@ class Fahrkartenautomat
        double eingezahlterGesamtbetrag;
        double eingeworfeneMünze;
        double rückgabebetrag;
+       int anzahl;
 
        System.out.print("Zu zahlender Betrag (EURO): ");
        zuZahlenderBetrag = tastatur.nextDouble();
+       
+       System.out.print("Anzahl der Tickets: ");
+       anzahl = tastatur.nextInt();
+       zuZahlenderBetrag = zuZahlenderBetrag * anzahl;
 
        // Geldeinwurf
        // -----------
        eingezahlterGesamtbetrag = 0.0;
        while(eingezahlterGesamtbetrag < zuZahlenderBetrag)
        {
-    	   System.out.println("Noch zu zahlen: " + (zuZahlenderBetrag - eingezahlterGesamtbetrag));
+    	   System.out.printf("Noch zu zahlen: %.2f Euro%n", (zuZahlenderBetrag - eingezahlterGesamtbetrag));
     	   System.out.print("Eingabe (mind. 5Ct, höchstens 2 Euro): ");
     	   eingeworfeneMünze = tastatur.nextDouble();
            eingezahlterGesamtbetrag += eingeworfeneMünze;
@@ -45,7 +50,7 @@ class Fahrkartenautomat
        rückgabebetrag = eingezahlterGesamtbetrag - zuZahlenderBetrag;
        if(rückgabebetrag > 0.0)
        {
-    	   System.out.println("Der Rückgabebetrag in Höhe von " + rückgabebetrag + " EURO");
+    	   System.out.printf("Der Rückgabebetrag in Höhe von %.2f Euro ", rückgabebetrag);
     	   System.out.println("wird in folgenden Münzen ausgezahlt:");
 
            while(rückgabebetrag >= 2.0) // 2 EURO-Münzen
@@ -84,4 +89,9 @@ class Fahrkartenautomat
                           "vor Fahrtantritt entwerten zu lassen!\n"+
                           "Wir wünschen Ihnen eine gute Fahrt.");
     }
-}
+} 
+
+// 5 - Wir benötigen nur ganze Zahlen und int passt genau auf unseren nutzen. 
+// Double z.b. ist zu detailiert für unseren zweck
+
+// 6 - die variable wird ersetzt durch den neu errechneten wert
