@@ -6,14 +6,14 @@ class Fahrkartenautomat
     {
        Scanner tastatur = new Scanner(System.in);
       
-       double zuZahlenderBetrag; 
-       double eingezahlterGesamtbetrag;
-       double eingeworfeneMünze;
-       double rückgabebetrag;
+       float zuZahlenderBetrag; 
+       float eingezahlterGesamtbetrag;
+       float eingeworfeneMünze;
+       float rückgabebetrag;
        int anzahl;
 
        System.out.print("Zu zahlender Betrag (EURO): ");
-       zuZahlenderBetrag = tastatur.nextDouble();
+       zuZahlenderBetrag = tastatur.nextFloat();
        
        System.out.print("Anzahl der Tickets: ");
        anzahl = tastatur.nextInt();
@@ -21,12 +21,12 @@ class Fahrkartenautomat
 
        // Geldeinwurf
        // -----------
-       eingezahlterGesamtbetrag = 0.0;
+       eingezahlterGesamtbetrag = 0.0f;
        while(eingezahlterGesamtbetrag < zuZahlenderBetrag)
        {
     	   System.out.printf("Noch zu zahlen: %.2f Euro%n", (zuZahlenderBetrag - eingezahlterGesamtbetrag));
     	   System.out.print("Eingabe (mind. 5Ct, höchstens 2 Euro): ");
-    	   eingeworfeneMünze = tastatur.nextDouble();
+    	   eingeworfeneMünze = tastatur.nextFloat();
            eingezahlterGesamtbetrag += eingeworfeneMünze;
        }
 
