@@ -1,9 +1,11 @@
 
 public class Captain {
 
+	private String name;
 	private String surname;
 	private int captainYears;
-	private double gehalt;
+	private double Salary;
+
 	// TODO: 3. Fuegen Sie in der Klasse 'Captain' das Attribut 'name' hinzu und
 	// implementieren Sie die entsprechenden get- und set-Methoden.
 	// TODO: 4. Implementieren Sie einen Konstruktor, der den Namen und den Vornamen
@@ -11,7 +13,27 @@ public class Captain {
 	// TODO: 5. Implementieren Sie einen Konstruktor, der alle Attribute
 	// initialisiert.
 
+	public Captain (String name, String surname){
+		this.surname=surname;
+		this.name=name;
+	}
 
+	public captain (String name, String surname, int captainYears, double Salary){
+		this(name,surname);
+		//this.name=name;
+		//this.surname=surname;
+		this.captainYears=captainYears;
+		this.Salary=Salary;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName(){
+		return this.name;
+	}
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
@@ -20,21 +42,29 @@ public class Captain {
 		return this.surname;
 	}
 
-	public void setSalary(double gehalt) {
+	public void setSalary(double Salary) {
 		// TODO: 1. Implementieren Sie die entsprechende set-Methode.
-		// Berücksichtigen Sie, dass das Gehalt nicht negativ sein darf.
-		this.gehalt = gehalt;
-
+		// Berï¿½cksichtigen Sie, dass das Gehalt nicht negativ sein darf.
+		if Salary > 0 
+		this.Salary = Salary;
 	}
 
 	public double getSalary() {
 		// TODO: 2. Implementieren Sie die entsprechende get-Methoden.
-		return 0.0;
+		return this.Salary;
 	}
-	// TODO: 6. Implementieren Sie die set-Methode und die get-Methode für
+
+	public void setcaptainYears(int captainYears) {
+		this.captainYears = captainYears;
+	}
+
+	public int getcaptainYears() {
+		return this.captainYears;
+	}
+	// TODO: 6. Implementieren Sie die set-Methode und die get-Methode fï¿½r
 	// captainYears.
-	// Berücksichtigen Sie, dass das Jahr nach Christus sein soll.
+	// Berï¿½cksichtigen Sie, dass das Jahr nach Christus sein soll.
 
 	// TODO: 7. Implementieren Sie eine Methode 'vollname', die den vollen Namen
-	// (Vor- und Nachname) als string zurückgibt.
+	// (Vor- und Nachname) als string zurï¿½ckgibt.
 }
