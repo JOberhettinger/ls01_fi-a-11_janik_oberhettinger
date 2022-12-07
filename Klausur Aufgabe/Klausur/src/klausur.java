@@ -30,7 +30,7 @@ public class Klausur {
 			
 			System.out.println("Die beiden Werte sind "+ anfang + " " + ende);
 			
-			for (int i=anfang; i<=ende; i++); {
+			for (int i=anfang; i<=ende; i++) {
 			  if (anfang % 3 == 0) {
 			      System.out.println("foo");
 			     //anfang=anfang+1;
